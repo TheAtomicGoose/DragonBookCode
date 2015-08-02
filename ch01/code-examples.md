@@ -10,11 +10,11 @@ This is just an example statement with hypothetical variables.
 `<id, 1> <=> <id, 2> <+> <id, 3> <*> <60>`
 
 The lexemes that the lexical analyzer would break statement `1.1` into. 
-```
-position -> id1
-initial  -> id2
-rate     -> id3
-```
+Variable | Assignment
+---------|-----------
+position | id1
+initial  | id2
+rate     | id2
 
 ###*1.3*
 ```
@@ -42,11 +42,13 @@ LDF  R1,  R1, id2
 ADDF R1,  R1, R2
 STF  id1, R1
 ```
-```
-LD  -> Load (into register)
-MUL -> Multiply
-ADD -> Add
-ST  -> Store
-```
+
+ Command |      Meaning      
+---------|-------------------
+LD       | Load into register
+MUL      | Multiply          
+ADD      | Add				 
+ST       | Store 
+
 
 The `F` at the end of each command means that we're dealing with floats. The `R` stands for register, and the first argument (first thing after the command) is the place where the result of the operation is being stored.
