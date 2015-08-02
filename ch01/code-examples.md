@@ -10,6 +10,7 @@ This is just an example statement with hypothetical variables.
 `<id, 1> <=> <id, 2> <+> <id, 3> <*> <60>`
 
 The lexemes that the lexical analyzer would break statement `1.1` into. 
+
 Variable | Assignment
 ---------|-----------
 position | id1
@@ -52,3 +53,4 @@ ST       | Store
 
 
 The `F` at the end of each command means that we're dealing with floats. The `R` stands for register, and the first argument (first thing after the command) is the place where the result of the operation is being stored.
+
