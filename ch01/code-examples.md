@@ -54,3 +54,19 @@ ST       | Store
 
 The `F` at the end of each command means that we're dealing with floats. The `R` stands for register, and the first argument (first thing after the command) is the place where the result of the operation is being stored.
 
+###*1.9*
+```C
+...
+int i;				/* global i		   */
+...
+void f(...) {
+	int i;          /* local i         */ 
+	...
+	i = 3;          /* use of local i  */
+	...
+}
+...
+x = i + 1;          /* use of global i */ 
+```
+
+In this example, the variable `i` has two different scopes based upon where it is used. The global version, which is defined outside of the function `f(...) {...}`, will be referenced whenever `i` is used outside of that function. However, since `i` is defined separately inside of `f(...) {...}`, when `i` is used inside of that function, it will refer to the version of `i` defined inside the function.
